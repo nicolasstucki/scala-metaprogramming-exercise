@@ -10,6 +10,7 @@ object Vectors {
   /** Compute the dot product of the vectors (represented as arrays)
    *  Returns (v1(0) * v2(0)) + (v1(1) * v2(1)) + ... + (v1(v1.length - 1) * v2(v2.length - 1))
    *  Or throws an exception if v1.length != v2.length
+   *  Both arrays are assumed to be immutable.
    */
   inline def dot(v1: => Array[Int], v2: => Array[Int]): Int = ~dotImpl('(v1), '(v2))(Tasty.macroContext)
   
