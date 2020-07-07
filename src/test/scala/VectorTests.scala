@@ -1,7 +1,7 @@
 import org.junit.Test
 import org.junit.Assert._
-
 import Vectors._
+import scala.language.implicitConversions
 
 class VectorTests {
 
@@ -10,7 +10,7 @@ class VectorTests {
     val empty: Array[Int] = Array()
     assertEquals(dot(empty, Array()), 0)
   }
-  
+
   @Test def zeroVector(): Unit = {
     assertEquals(dot(Array(1, 2, 3, 4, 5), Array(0, 0, 0, 0, 0)), 0)
     val zeros: Array[Int] = Array(0, 0, 0, 0, 0)
@@ -38,7 +38,6 @@ class VectorTests {
     val vec: Array[Int] = Array(1, 2, 3, 4, 5)
     assertEquals(dot(vec, Array(10, 20, 30, 40, 50)), 550)
   }
-
 
   @Test def mixedVector(): Unit = {
     val v1 = 1
