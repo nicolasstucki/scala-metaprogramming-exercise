@@ -1,4 +1,4 @@
-# TASTy Reflection exercise
+# Scala metaprogramming exercise
 
 ### Usage
 
